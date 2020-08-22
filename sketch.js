@@ -78,11 +78,11 @@ function doIfClosed(){
     result1.innerHTML ="";
 }
 
+let unp = false;
 function tS(mas){
   let st = mas.join(" ").replace(/([^ ]+ [^ ]+ [^ ]+ [^ ]+) /g, '$1/');
   let ar = st.match(/( 0).*\1/);
-  //console.log(ar);
-  if (mas[mas.length-1] != 0){
+  if (unp){
     st = "Please, prepare scramble first (blank on right bottom)"; 
     doIfClosed();
   }
@@ -94,6 +94,10 @@ function tS(mas){
 }
 
 function getDark(mas){
+  unp = false;
+  if(mas[mas.length-1] != 0){
+    unp = true;
+  }
   let newMas = [];
   for (let i = 0; i<=15;i++){
     newMas.push(mas.indexOf(i+1)+1);
