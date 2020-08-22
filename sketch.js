@@ -37,10 +37,7 @@ scr.oninput = function(){
      result1.innerHTML = "<h1><b>" +news + "</b></h1>";
    }
   else{
-    hd.hidden = true;
-    sol.type = "hidden";
-    lab.style="display:none";
-    result1.innerHTML =""
+    doIfClosed();
   }
 }
 
@@ -74,16 +71,24 @@ for (let i = 0; i<=15;i++){
 return mas;
 }
 
+function doIfClosed(){
+   hd.hidden = true;
+    sol.type = "hidden";
+    lab.style="display:none";
+    result1.innerHTML ="";
+}
+
 function tS(mas){
   let st = mas.join(" ").replace(/([^ ]+ [^ ]+ [^ ]+ [^ ]+) /g, '$1/');
   let ar = st.match(/( 0).*\1/);
   //console.log(ar);
+  if (mas[mas.length-1] != 0){
+    st = "Please, prepare scramble first (blank on right bottom)"; 
+    doIfClosed();
+  }
   if(!(ar===null)){
     st = "Sorry, your scramble is broken";
-    hd.hidden = true;
-    sol.type = "hidden";
-    lab.style="display:none";
-    result1.innerHTML ="";
+    doIfClosed();
   }
   return st;
 }
