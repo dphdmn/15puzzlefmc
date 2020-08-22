@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  </head>
+  <body>
+  <div class="w3-container" style="
+                                    position: relative;
+                                    max-width:50%;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                    padding-top:5%;
+                                    ">
+    <h1 style="font-size: 50px"> Some 15 puzzle FMC helper</h1>
+     <div class="Input">
+  <input class="Input-text" placeholder="Paste the prepared scramble (after blank setup)" type="text" id="scr" size="100">
+         <label for="scr" class="Input-label">Prepared scramble</label>
+    </div>
+    <div class="Input">
+    
+  <input algin="center" class="Input-text" type="text" id="sm" size="100" placeholder="Write your setup move (if there was)">
+   <label for="scr" class="Input-label">Setup move</label>
+    </div>
+  <h1 id="hd" hidden="">Do FMC on that</h1>
+  <span id="result1"></span>
+
+   <div class="Input">
+    
+  <input algin="center" class="Input-text" type="hidden" id="sol" size="100" placeholder="Paste your solution">
+   <label id="lab" for="sol" style="display:none" class="Input-label">Solution for dark magic state</label>
+    </div>
+    <br>
+    
+    <span id="result2"></span>
+  </div>
+  
+  
+  <script src="sketch.js"></script>
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+
+    
+ 
+
+</body></html>
