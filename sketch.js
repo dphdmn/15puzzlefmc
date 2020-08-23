@@ -1,3 +1,4 @@
+
 sm = document.getElementById('sm');
 scr = document.getElementById('scr');
 hd = document.getElementById('hd');
@@ -7,7 +8,7 @@ sol = document.getElementById('sol');
 lab = document.getElementById('lab');
 badsol = false;
 sm.oninput = function(){
-  if (sol.type == "text" && sol.value !== ""){
+  if (sol.type == "text"){
     getRes();
   }
 }
@@ -17,6 +18,9 @@ sol.oninput = function(){
 }
 
 function getRes(){
+  if (sol.value == ""){
+    result2.innerHTML =  "";
+  }else{
   let out = conec(sol.value,sm.value);
   if (out.length == 0){
     result2.innerHTML =  "<h1>Empty solution</h1>"
@@ -26,6 +30,7 @@ function getRes(){
     }else{
   result2.innerHTML = "<h1>Solution for the original scramble</h1><h2><b>" + out + "</b></h2><h2>Moves: " + out.length + "</h2>";
   }}
+  }
 }
 
 function checkScramble(){
@@ -136,3 +141,6 @@ function conec(sol,set){
   }
   return inverseShit(s);
 }
+
+  
+
