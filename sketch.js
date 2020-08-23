@@ -76,6 +76,7 @@ function doIfClosed(){
     sol.type = "hidden";
     lab.style="display:none";
     result1.innerHTML ="";
+  result2.innerHTML =  ""
 }
 
 let unp = false;
