@@ -7,7 +7,7 @@ sol = document.getElementById('sol');
 lab = document.getElementById('lab');
 badsol = false;
 sm.oninput = function(){
-  if (sol.type == "text"){
+  if (sol.type == "text" && sol.value !== ""){
     getRes();
   }
 }
