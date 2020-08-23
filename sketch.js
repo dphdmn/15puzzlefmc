@@ -49,6 +49,7 @@ function setup(){
   checkScramble();
 }
 scr.oninput = function(){
+  sol.value = "";
   checkScramble();
 }
 
