@@ -28,7 +28,7 @@ function getRes(){
   }}
 }
 
-scr.oninput = function(){
+function checkScramble(){
    if (scr.value != ""){
      hd.hidden = false;
      lab.style = "";
@@ -39,6 +39,12 @@ scr.oninput = function(){
   else{
     doIfClosed();
   }
+}
+function setup(){
+  checkScramble();
+}
+scr.oninput = function(){
+  checkScramble();
 }
 
 function clearShit(str1){
